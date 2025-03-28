@@ -111,7 +111,7 @@ Cursors:
 	ra|cursors.yaml
 
 Chrome:
-	ra|chrome.yaml
+	da|chrome.yaml
 
 Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll
 
@@ -134,7 +134,7 @@ ChromeLayout:
 	common|chrome/ingame-debug-hpf.yaml
 	common|chrome/ingame-debuginfo.yaml
 	common|chrome/ingame-infochat.yaml
-	common|chrome/mainmenu.yaml
+	da|chrome/mainmenu.yaml
 	common|chrome/mainmenu-prompts.yaml
 	common|chrome/settings.yaml
 	common|chrome/settings-display.yaml
