@@ -1,0 +1,534 @@
+Header { Version = 6 }
+
+SkipIf -nomonstermod
+
+# -----------------------------------------------
+# -                  Cyberdemon                 - by Dani J
+# -----------------------------------------------
+
+#------------------------------------------------------------------
+# MODEL DEFINITIONS
+
+ModelPath "data/jdoom/Models/Monsters/Cyberdemon"
+
+Model {
+  State = "CYBER_RUN1"
+  Group = "mg_monster"
+  Scale XYZ { .52 .52 .52 }
+  Md2 {
+	File = "cybr.md2"
+        Flags = selskin
+        Selskin mask = 0x7
+        Selskins {4 3 2 1 0 0 0 0 }
+	Frame = "walk1"
+	}
+  Md2 {
+	File = "cybrw.md2"
+        Flags = selskin
+        Selskin mask = 0x7
+        Selskins {7 6 5 4 3 2 1 0 };
+	Frame = "walk1"
+	}
+  Md2 {
+	File = "cybrwea.md2"
+        Skin = 0
+	Frame = "walk1"
+	}
+}
+
+Copy Model {  State = "CYBER_RUN2"  Md2 { Frame = "walk02" } Md2 { Frame = "walk02" } Md2 { Frame = "walk02" } }
+Copy Model {  State = "CYBER_RUN3"  Md2 { Frame = "walk03" } Md2 { Frame = "walk03" } Md2 { Frame = "walk03" } }
+Copy Model {  State = "CYBER_RUN4"  Md2 { Frame = "walk04" } Md2 { Frame = "walk04" } Md2 { Frame = "walk04" } }
+Copy Model {  State = "CYBER_RUN5"  Md2 { Frame = "walk05" } Md2 { Frame = "walk05" } Md2 { Frame = "walk05" } }
+Copy Model {  State = "CYBER_RUN6"  Md2 { Frame = "walk06" } Md2 { Frame = "walk06" } Md2 { Frame = "walk06" } }
+Copy Model {  State = "CYBER_RUN7"  Md2 { Frame = "walk07" } Md2 { Frame = "walk07" } Md2 { Frame = "walk07" } }
+Copy Model {  State = "CYBER_RUN8"  Md2 { Frame = "walk08" } Md2 { Frame = "walk08" } Md2 { Frame = "walk08" } }
+                                                                                                                                  
+Copy Model {  State = "CYBER_STND"  Md2 { frame = "walk01" } Md2 { frame = "walk01" } Md2 { frame = "walk01" } }
+Copy Model {  State = "CYBER_STND2" Md2 { frame = "walk01" } Md2 { frame = "walk01" } Md2 { frame = "walk01" } }
+                                                                                                                                  
+Copy Model {  State = "CYBER_PAIN" Inter=.0 Md2 { frame = "pain01" } Md2 { frame = "pain01" } Md2 { frame = "pain01" } }
+Copy Model {  State = "CYBER_PAIN" Inter=.3 Md2 { frame = "pain02" } Md2 { frame = "pain02" } Md2 { frame = "pain02" } }
+Copy Model {  State = "CYBER_PAIN" Inter=.6 Md2 { frame = "pain03" } Md2 { frame = "pain03" } Md2 { frame = "pain03" } }
+                                                                                                                                  
+                                                                                                                                  
+Copy Model { State = "CYBER_ATK2" Inter=.0 Md2 { frame = "fire02" } Md2 { frame = "fire02" } Md2 { frame = "fire02" skin = 1 } }
+Copy Model { State = "CYBER_ATK2" Inter=.9 Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "fire01" } }
+Copy Model { State = "CYBER_ATK4" Inter=.0 Md2 { frame = "fire02" } Md2 { frame = "fire02" } Md2 { frame = "fire02" } }
+Copy Model { State = "CYBER_ATK4" Inter=.9 Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "fire01" } }
+Copy Model { State = "CYBER_ATK6" Inter=.0 Md2 { frame = "fire02" } Md2 { frame = "fire02" } Md2 { frame = "fire02" } }
+Copy Model { State = "CYBER_ATK6" Inter=.9 Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "fire01" } }
+                                                                                                                                  
+Copy Model { State = "CYBER_ATK1" Inter=.0 Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "fire01" skin = 0 } }
+Copy Model { State = "CYBER_ATK1" Inter=.9 Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "fire01" } }
+Copy Model { State = "CYBER_ATK3" Inter=.0 Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "fire01" } }
+Copy Model { State = "CYBER_ATK3" Inter=.9 Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "fire01" } }
+Copy Model { State = "CYBER_ATK5" Inter=.0 Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "fire01" } }
+Copy Model { State = "CYBER_ATK5" Inter=.9 Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "fire01" } }
+
+Copy Model { State = "CYBER_ATK2" Inter=.0 Md2 { frame = "fire02" } Md2 { frame = "fire02" } Md2 { frame = "fire02" skin = 1 } Md2 {File = "cybershot.md2" Flags = brightshadow2 } }
+Copy Model { State = "CYBER_ATK2" Inter=.9 Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "atkb2" } }
+Copy Model { State = "CYBER_ATK4" Inter=.0 Md2 { frame = "fire02" } Md2 { frame = "fire02" } Md2 { frame = "fire02" } Md2 { frame = "atkb1" } }
+Copy Model { State = "CYBER_ATK4" Inter=.9 Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "atkb2" } }
+Copy Model { State = "CYBER_ATK6" Inter=.0 Md2 { frame = "fire02" } Md2 { frame = "fire02" } Md2 { frame = "fire02" } Md2 { frame = "atkb1" } }
+Copy Model { State = "CYBER_ATK6" Inter=.9 Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "fire01" } Md2 { frame = "atkb2" } }
+                                                                                                                                  
+                                                                                                                                  
+
+Model {
+  State = "CYBER_DIE1"
+  Scale XYZ { .52 .52 .52 }
+  Md2 {
+	File = "cybrdie.md2"
+	frame = "die1"
+	}
+  Md2 {
+	File = "cybrdwea.md2"
+	frame = "die1"
+	}
+}
+
+Copy Model {
+  State = "CYBER_DIE2"
+  Md2 {
+	frame = "die2"
+	}
+  Md2 {
+	frame = "die2"
+	}
+}
+
+Copy Model {
+  State = "CYBER_DIE3"
+  Md2 {
+	frame = "die3"
+	}
+  Md2 {
+	frame = "die3"
+	}
+}
+
+Copy Model {
+  Inter = 0.5
+  Md2 {
+	frame = "die34"
+	}
+  Md2 {
+	frame = "die34"
+	}
+}
+
+Copy Model {
+  State = "CYBER_DIE4"
+  Inter = 0
+  Md2 {
+	frame = "die4"
+	}
+  Md2 {
+	frame = "die4"
+	}
+}
+
+Copy Model {
+  Inter = 0.5
+  Md2 {
+	frame = "die54"
+	}
+  Md2 {
+	frame = "die54"
+	}
+}
+
+Copy Model {
+  State = "CYBER_DIE5"
+  Inter = 0
+  Md2 {
+	frame = "die5"
+	}
+  Md2 {
+	frame = "die5"
+	}
+}
+
+Copy Model {
+  Inter = 0.5
+  Md2 {
+	frame = "die54"
+	}
+  Md2 {
+	frame = "die54"
+	}
+}
+
+Copy Model {
+  Inter = 0
+  State = "CYBER_DIE6"
+  Md2 {
+	frame = "die4"
+	}
+  Md2 {
+	frame = "die4"
+	}
+}
+
+Copy Model {
+  Inter = 0.5
+  Md2 {
+	frame = "die34"
+	}
+  Md2 {
+	frame = "die34"
+	}
+}
+
+Copy Model {
+  Inter = 0
+  State = "CYBER_DIE7"
+  Md2 {
+	frame = "die3a"
+	}
+  Md2 {
+	frame = "die3a"
+	}
+}
+
+Copy Model {
+  Inter = 0.5
+  Md2 {
+	frame = "die34"
+	}
+  Md2 {
+	frame = "die34"
+	}
+}
+
+Copy Model {
+  Inter = 0
+  State = "CYBER_DIE8"
+  Md2 {
+	frame = "die4"
+	}
+  Md2 {
+	frame = "die4"
+	}
+}
+
+Copy Model {
+  Inter = 0.5
+  Md2 {
+	frame = "die54"
+	}
+  Md2 {
+	frame = "die54"
+	}
+}
+
+Copy Model {
+  State = "CYBER_DIE9"
+  Inter = 0
+  Md2 {
+	frame = "die5"
+	}
+  Md2 {
+	frame = "die5"
+	}
+  Md2 {
+	File = "cybrblood.md2"
+	frame = "die5"
+	}
+}
+
+Copy Model {  Inter = 0.2
+  Md2 {
+	frame = "die6"
+	}
+  Md2 {
+	frame = "die6"
+	}
+  Md2 {
+	frame = "die6"
+	}
+}
+
+Copy Model {
+  Inter = 0.4
+  Md2 {
+	frame = "die7"
+	}
+  Md2 {
+	frame = "die7"
+	}
+  Md2 {
+	frame = "die7"
+	}
+}
+
+Copy Model {
+  Inter = 0.6
+  Md2 {
+	frame = "die8"
+	}
+  Md2 {
+	frame = "die8"
+	}
+  Md2 {
+	frame = "die8"
+	}
+}
+
+Copy Model {
+  Inter = 0.8
+  Md2 {
+	frame = "die9"
+	}
+  Md2 {
+	frame = "die9"
+	}
+  Md2 {
+	frame = "die9"
+	}
+}
+
+Copy Model {
+  Inter = 0.9
+  Md2 {
+	frame = "die10"
+	}
+  Md2 {
+	frame = "die10"
+	}
+  Md2 {
+	frame = "die10"
+	}
+}
+
+Copy Model {
+  Inter = 0.95
+  Md2 {
+	frame = "die11"
+	}
+  Md2 {
+	frame = "die11"
+	}
+  Md2 {
+	frame = "die11"
+	}
+}
+
+Copy Model {
+  State = "CYBER_DIE10"
+  Inter = 0
+  Md2 {
+	frame = "die11"
+	}
+  Md2 {
+	frame = "die11"
+	}
+  Md2 {
+	frame = "die11"
+	}
+}
+
+#------------------------------------------------------------------
+# LIGHT DEFINITIONS
+
+#------------------------------------------------------------------
+# PARTICLE DEFINITIONS
+
+# Damage Blood Spurt
+
+Generator {
+  Damage Mobj = "CYBORG"
+  Flags = srcvel | blendrsub
+  Vector { 0 0 4 }
+  Speed = -24
+  Speed rnd = 3
+  Spawn age = 1
+  Max age = 800
+  Particles = 2
+  Spawn radius = 1
+  Spawn rate = 2
+  Vector rnd = .3
+  Alt start = 6
+  Alt Rnd = .1
+  Stage {
+    	Type = "pt_point"
+	Flags = flat | stagetouch | force
+    	Radius = .1
+	Color { 0 1 1 1 }
+    	Tics = 300
+    	Resistance = 0.3
+	Gravity = 1
+	}
+  Stage {
+    	Type = "pt_tex05"
+	Flags = vflat | flat
+    	Radius = 2.5
+	Color { 0 1 1 1 }
+    	Tics = 10
+	Gravity = .3
+    	Resistance = 0.6
+  	}
+  Stage {
+    	Type = "pt_tex05"
+	Flags = vflat | flat
+    	Radius = 7
+	Color { 0 1 1 1 }
+    	Tics = 20
+	Gravity = .5
+    	Resistance = 0.9
+  	}
+  Stage {
+    	Type = "pt_tex05"
+	Flags = flat 
+    	Radius = 7
+	Gravity = 1
+    	Color { 0 1 1 1 }
+    	Tics = 600
+    	Resistance = 1
+  	}
+  Stage { 
+    	Tics = 1
+	Type = "pt_tex05"
+	Flags = dietouch
+    	Radius = 7
+	Color { 0 1 1 0 } 
+  	}
+  Stage { 
+    	Tics = 1000
+    	Radius = .1
+  	}
+  Stage {
+    	Type = "pt_point"
+	Flags = flat | stagetouch | force
+    	Radius = 1.5
+	Color { 0 1 1 1 }
+    	Tics = 300
+    	Resistance = 0.3
+	Gravity = 1
+  	}
+  Stage {
+    	Type = "pt_tex11"
+	Flags = vflat | flat
+    	Radius = 2.5
+	Color { 0 1 1 1 }
+    	Tics = 10
+	Gravity = .3
+    	Resistance = 0.6
+  	}
+  Stage {
+    	Type = "pt_tex11"
+	Flags = vflat | flat
+    	Radius = 6 
+	Color { 0 1 1 1 }
+    	Tics = 20
+	Gravity = .5
+    	Resistance = 0.9
+  	}
+  Stage {
+    	Type = "pt_tex11"
+	Flags = flat 
+    	Radius = 6
+	Gravity = 1
+    	Color { 0 1 1 1 }
+    	Tics = 600
+   	Resistance = 1
+  	}
+  Stage { 
+    	Tics = 1
+	Type = "pt_tex11"
+	Flags = dietouch
+   	Radius = 6
+	Color { 0 1 1 0 }
+  	}
+  Stage { 
+    	Tics = 1000
+    	Radius = .1
+  	}
+}
+
+
+# Blood Eruption - When destroyed
+
+Generator {
+  State = "CYBER_DIE2"
+  Speed = 1.2
+  Speed rnd = 0.2
+  Spawn radius = 0
+  Spawn age = 10
+  Max age = 150
+  Particles = 30
+  Spawn rate = 3
+  Center { 0 0 60 }	
+  Vector rnd = 1
+  Stage {
+  	Type = "pt_tex11"
+	Tics = 2
+	Radius = 8
+	Bounce = 0
+	Resistance = .01
+	Color { .5 0 0 .3 }
+	}
+  Stage {
+  	Type = "pt_tex11"
+	Tics = 20
+	Radius = 15
+	Bounce = 0
+	Resistance = .01
+	Color { .5 0 0 .3 }
+	}
+  Stage {
+	Type = "pt_tex11"
+	Tics = 30
+	Radius = 20
+	Color { 1 0 0 1 }
+	}
+  Stage {
+	Type = "pt_tex11"
+	Radius = 30
+	Tics = 30
+	Color { .2 0 0 0}
+	}
+}
+
+Generator {
+  State = "CYBER_DIE3"
+  Flags = blendrsub
+  Speed = 2
+  Speed rnd = 0.2
+  Spawn radius = 0
+  Spawn age = 10
+  Max age = 150
+  Particles = 50
+  Spawn rate = 5
+  Center { 0 0 60 }	
+  Vector rnd = 1
+  Stage {
+  	Type = "pt_tex11"
+	Tics = 2
+	Radius = 8
+	Bounce = 0
+	Resistance = .01
+	Color { 0 .5 .5 .3 }
+	}
+  Stage {
+  	Type = "pt_tex11"
+	Tics = 20
+	Radius = 15
+	Bounce = 0
+	Resistance = .01
+	Color { 0 .5 .5 .3 }
+	}
+  Stage {
+	Type = "pt_tex11"
+	Tics = 20
+	Radius = 20
+	Color { 0 1 1 1 }
+	}
+  Stage {
+	Type = "pt_tex11"
+	Radius = 30
+	Tics = 30
+	Color { 0 .2 .2 0}
+	}
+}

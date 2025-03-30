@@ -1,0 +1,17 @@
+name: Cyber Demon
+category: bosses
+provides: doom-model-cyberdemon
+
+language english (
+  version: 1.01
+  summary:
+  contact:
+  author:
+  copyright: 
+  license: Free for non-commercial use.
+
+  readme:
+)
+
+# Require a certain game component:
+component: game-jdoom
