@@ -1,25 +1,21 @@
 Metadata:
 	Title: mod-title
-	Version: Doom Alert Pre-Alpha
+	Version: release-20250303
 	Website: https://www.openra.net
 	WebIcon32: https://www.openra.net/images/icons/ra_32x32.png
 	WindowTitle: mod-windowtitle
-
-RequiresMods:
-	ra: release-20250303
 
 PackageFormats: Mix
 
 FileSystem: ContentInstallerFileSystem
 	SystemPackages:
 		^EngineDir
-		$ra: ra
-		^EngineDir|mods/common: common
-		~^SupportDir|Content/ra/v2/: content
-		common|scripts
-		ra|scripts
-		ra|uibits
 		$da: da
+		^EngineDir|mods/common: common
+		~^SupportDir|Content/da/v2/: content
+		common|scripts
+		da|scripts
+		da|uibits
 	ContentPackages:
 		content|allies.mix
 		content|conquer.mix
@@ -41,9 +37,8 @@ FileSystem: ContentInstallerFileSystem
 		~content|scores.mix
 		~content|general.mix
 		# Below are mod-provided (system) packages that need to be loaded after the content packages so they can override content assets.
-		ra|bits
-		ra|bits/desert
-		da|ui
+		da|bits
+		da|bits/desert
 	RequiredContentFiles:
 		content|expand/chrotnk1.aud
 		content|expand/fixit1.aud
@@ -69,46 +64,46 @@ FileSystem: ContentInstallerFileSystem
 		content|expand/mwrench1.aud
 		content|expand/myeehaw1.aud
 		content|expand/myes1.aud
-	ContentInstallerMod: ra-content
+	ContentInstallerMod: da-content
 
 MapFolders:
-	ra|maps: System
-	~^SupportDir|maps/ra/release-20250303: User
+	da|maps: System
+	~^SupportDir|maps/da/release-20250303: User
 
 Rules:
-	ra|rules/misc.yaml
-	ra|rules/ai.yaml
-	ra|rules/player.yaml
-	ra|rules/palettes.yaml
-	ra|rules/world.yaml
-	ra|rules/defaults.yaml
-	ra|rules/vehicles.yaml
-	ra|rules/husks.yaml
-	ra|rules/structures.yaml
-	ra|rules/infantry.yaml
-	ra|rules/civilian.yaml
-	ra|rules/decoration.yaml
-	ra|rules/aircraft.yaml
-	ra|rules/ships.yaml
-	ra|rules/fakes.yaml
+	da|rules/misc.yaml
+	da|rules/ai.yaml
+	da|rules/player.yaml
+	da|rules/palettes.yaml
+	da|rules/world.yaml
+	da|rules/defaults.yaml
+	da|rules/vehicles.yaml
+	da|rules/husks.yaml
+	da|rules/structures.yaml
+	da|rules/infantry.yaml
+	da|rules/civilian.yaml
+	da|rules/decoration.yaml
+	da|rules/aircraft.yaml
+	da|rules/ships.yaml
+	da|rules/fakes.yaml
 
 Sequences:
-	ra|sequences/ships.yaml
-	ra|sequences/vehicles.yaml
-	ra|sequences/structures.yaml
-	ra|sequences/infantry.yaml
-	ra|sequences/aircraft.yaml
-	ra|sequences/misc.yaml
-	ra|sequences/decorations.yaml
+	da|sequences/ships.yaml
+	da|sequences/vehicles.yaml
+	da|sequences/structures.yaml
+	da|sequences/infantry.yaml
+	da|sequences/aircraft.yaml
+	da|sequences/misc.yaml
+	da|sequences/decorations.yaml
 
 TileSets:
-	ra|tilesets/snow.yaml
-	ra|tilesets/interior.yaml
-	ra|tilesets/temperat.yaml
-	ra|tilesets/desert.yaml
+	da|tilesets/snow.yaml
+	da|tilesets/interior.yaml
+	da|tilesets/temperat.yaml
+	da|tilesets/desert.yaml
 
 Cursors:
-	ra|cursors.yaml
+	da|cursors.yaml
 
 Chrome:
 	da|chrome.yaml
@@ -127,14 +122,14 @@ ChromeLayout:
 	common|chrome/ingame-infostats.yaml
 	common|chrome/ingame-info-lobby-options.yaml
 	common|chrome/ingame-menu.yaml
-	ra|chrome/ingame-observer.yaml
-	ra|chrome/ingame-player.yaml
+	da|chrome/ingame-observer.yaml
+	da|chrome/ingame-player.yaml
 	common|chrome/ingame-perf.yaml
 	common|chrome/ingame-debug.yaml
 	common|chrome/ingame-debug-hpf.yaml
 	common|chrome/ingame-debuginfo.yaml
 	common|chrome/ingame-infochat.yaml
-	da|chrome/mainmenu.yaml
+	common|chrome/mainmenu.yaml
 	common|chrome/mainmenu-prompts.yaml
 	common|chrome/settings.yaml
 	common|chrome/settings-display.yaml
@@ -159,7 +154,7 @@ ChromeLayout:
 	common|chrome/connection.yaml
 	common|chrome/replaybrowser.yaml
 	common|chrome/gamesave-browser.yaml
-	ra|chrome/gamesave-loading.yaml
+	da|chrome/gamesave-loading.yaml
 	common|chrome/dropdowns.yaml
 	common|chrome/musicplayer.yaml
 	common|chrome/tooltips.yaml
@@ -175,29 +170,29 @@ FluentMessages:
 	common|fluent/chrome.ftl
 	common|fluent/hotkeys.ftl
 	common|fluent/rules.ftl
-	ra|fluent/ra.ftl
-	ra|fluent/chrome.ftl
-	ra|fluent/hotkeys.ftl
-	ra|fluent/rules.ftl
+	da|fluent/ra.ftl
+	da|fluent/chrome.ftl
+	da|fluent/hotkeys.ftl
+	da|fluent/rules.ftl
 
 AllowUnusedFluentMessagesInExternalPackages: false
 
 Weapons:
-	ra|weapons/explosions.yaml
-	ra|weapons/ballistics.yaml
-	ra|weapons/missiles.yaml
-	ra|weapons/other.yaml
-	ra|weapons/smallcaliber.yaml
-	ra|weapons/superweapons.yaml
+	da|weapons/explosions.yaml
+	da|weapons/ballistics.yaml
+	da|weapons/missiles.yaml
+	da|weapons/other.yaml
+	da|weapons/smallcaliber.yaml
+	da|weapons/superweapons.yaml
 
 Voices:
-	ra|audio/voices.yaml
+	da|audio/voices.yaml
 
 Notifications:
-	ra|audio/notifications.yaml
+	da|audio/notifications.yaml
 
 Music:
-	ra|audio/music.yaml
+	da|audio/music.yaml
 
 Hotkeys:
 	common|hotkeys/game.yaml
@@ -208,12 +203,12 @@ Hotkeys:
 	common|hotkeys/chat.yaml
 	common|hotkeys/editor.yaml
 	common|hotkeys/control-groups.yaml
-	ra|hotkeys.yaml
+	da|hotkeys.yaml
 
 LoadScreen: LogoStripeLoadScreen
-	Image: ra|uibits/loadscreen.png
-	Image2x: ra|uibits/loadscreen-2x.png
-	Image3x: ra|uibits/loadscreen-3x.png
+	Image: da|uibits/loadscreen.png
+	Image2x: da|uibits/loadscreen-2x.png
+	Image3x: da|uibits/loadscreen-3x.png
 
 ServerTraits:
 	LobbyCommands
@@ -224,7 +219,7 @@ ServerTraits:
 
 ChromeMetrics:
 	common|metrics.yaml
-	ra|metrics.yaml
+	da|metrics.yaml
 
 Fonts:
 	Tiny:
@@ -256,12 +251,12 @@ Fonts:
 		Size: 24
 		Ascender: 18
 	Title:
-		Font: ra|ZoodRangmah.ttf
+		Font: da|ZoodRangmah.ttf
 		Size: 48
 		Ascender: 26
 
 Missions:
-	ra|missions.yaml
+	da|missions.yaml
 
 MapGrid:
 	TileSize: 24,24
@@ -269,11 +264,11 @@ MapGrid:
 
 DefaultOrderGenerator: UnitOrderGenerator
 
-SupportsMapsFrom: ra
+SupportsMapsFrom: da, ra
 
-SoundFormats: Aud, Wav
+SoundFormats: Aud, Wav, Mp3, Ogg
 
-SpriteFormats: ShpD2, ShpTD, TmpRA, TmpTD, ShpTS
+SpriteFormats: ShpD2, ShpTD, TmpRA, TmpTD, ShpTS, PngSheet
 
 VideoFormats: Vqa, Wsa
 

@@ -10,7 +10,9 @@
 	Image3x: glyphs-3x.png
 
 ^LoadScreen:
-	Image: logo1.png
+	Image: loadscreen.png
+	Image2x: loadscreen-2x.png
+	Image3x: loadscreen-3x.png
 
 sidebar-allies:
 	Inherits: ^Sidebar
@@ -613,7 +615,7 @@ scrollheader-highlighted:
 logos:
 	Inherits: ^LoadScreen
 	Regions:
-		logo: 0, 0, 1024, 512
+		logo: 0, 0, 256, 256
 
 loadscreen-stripe:
 	Inherits: ^LoadScreen
